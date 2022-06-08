@@ -50,6 +50,8 @@ test:
 #
 production:
   <<: *default
-  database: VoiceLife2_production
-  username: VoiceLife2
-  password: <%= ENV['VOICELIFE2_DATABASE_PASSWORD'] %>
+  database: <%= ENV["VOICELIFE_DATABASE_NAME"] %>
+  username: <%= ENV["VOICELIFE_DATABASE_USERNAME"] %>
+  password: <%= ENV["VOICELIFE_DATABASE_PASSWORD"] %>
+  host: <%= ENV["VOICELIFE_DATABASE_HOSTNAME"] %>
+  port: <%= ENV["VOICELIFE_DATABASE_PORT"] %>
