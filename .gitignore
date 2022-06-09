@@ -34,3 +34,10 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+/config/credentials/production.key
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
