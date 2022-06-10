@@ -16,6 +16,8 @@ default: &default
   username: root
   password: Portfolio-777
   host: localhost
+  socket: /tmp/mysql.sock
+
 
 development:
   <<: *default
