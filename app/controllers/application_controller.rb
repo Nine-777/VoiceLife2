@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
   #   posts_path
   # end
 
-  def after_sign_out_path_for(resource)
-    admin_root_path
-  end
+  # def after_sign_out_path_for(resource)
+  #   admin_root_path
+  # end
 
 end
