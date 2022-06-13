@@ -3,7 +3,7 @@
     <% @posts.each do |post| %>
       <div class="posts-index-item">
         <div class="post-right">
-          <%= link_to(post.content, "/posts/#{post.id}") %>
+          <%= link_to(post.content, "/posts/#{post.id}/edit") %>
         </div>
       </div>
     <% end %>

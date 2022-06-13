@@ -17,8 +17,8 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(
       content: params[:post][:content],
-      user_id: @current_user.id,
-      file: params[:post][:file]
+      user_id: current_user.id,
+      # file: params[:post][:file]
     )
     if @post.save
       flash[:notice] = "投稿を作成しました"
@@ -56,6 +56,10 @@ class PostsController < ApplicationController
       flash[:notice] = "権限がありません"
       redirect_to posts_path
     end
+  end
+
+  def post_params
+    params.require(:post).permit(:title, :content).merge(user_id: current_user.id)
   end
 
   end
