@@ -1,19 +1,19 @@
-<div class="post-main posts-new">
+<div class="post-main posts-index">
   <div class="post-container">
-    <h1 class="form-heading">投稿する</h1>
-    <div class="form">
-      <% @post.errors.full_messages.each do |message| %>
-        <div class="form-error">
-          <%= message %>
-        </div>
-      <% end %>
-      <%= form_for @post do |f| %>
-        <p style="background-color:#f5f8fa";>コンテンツ</p>
-        <%= f.text_area :content %>
-        <p style="background-color:#f5f8fa";>ファイル</p>
-        <%= f.file_field :file , :size => 140 %>
-        <%= f.submit "送信" %>
-      <% end %>
-    </div>  
+    <div class="posts-show-item">
+      <div class="post-user-name">
+        <%= link_to(@user.name, "/users/#{@user.id}") %>
+      </div>
+      <p>
+        <%= @post.content %>
+      </p>
+      <div class="post-time">
+        <%= @post.created_at %>
+      </div>
+      <div class="post-menus">
+        <%= link_to("編集", "/posts/#{@post.id}/edit") %>
+        <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
+      </div>
+    </div>
   </div>
 </div>
