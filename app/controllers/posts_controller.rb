@@ -62,4 +62,10 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :content).merge(user_id: current_user.id)
   end
 
+  def search
+    @posts = Post.search(params[:keyword])
+    @keyword = params[:keyword]
+    render "index"
+  end
+
   end
