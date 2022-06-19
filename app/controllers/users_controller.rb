@@ -18,7 +18,6 @@ class UsersController < ApplicationController
       email: params[:email],
       password: params[:password],
       password_confirmation: params[:password_confirmation],
-      image_name: "default_user.jpg"
     )
     if @user.save
       session[:user_id] = @user.id
@@ -37,19 +36,9 @@ class UsersController < ApplicationController
   def update            
     @user = User.find_by(id: params[:id])            
     @user.name = params[:name]   
-    @user.self_introduction = params[:profile]         
-    @user.email = params[:email]
-    if params[:image]
-      @user.image_name = "#{@user.id}.jpg"
-      image = params[:image]
-      File.binwrite("public/user_images/#{@user.image_name}", image.read)
-    end            
-    if @user.save                        
-      redirect_to("/users/#{@user.id}")
-      flash[:notice] = "ユーザー情報を編集しました"            
-    else            
-      render("users/edit")        
-    end            
+    @user.self_introduction = params[:profile]
+    @user.avatar = params[:avatar]                  
+    @user.email = params[:email]           
   end
 
   def login_form
