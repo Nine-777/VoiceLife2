@@ -18,7 +18,7 @@ class PostsController < ApplicationController
     @post = Post.new(
       content: params[:post][:content],
       user_id: current_user.id,
-      # file: params[:post][:file]
+      file: params[:post][:file]
     )
     if @post.save
       flash[:notice] = "投稿を作成しました"
