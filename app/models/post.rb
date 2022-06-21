@@ -13,6 +13,7 @@ class Post < ApplicationRecord
   validates :content, {presence: true, length: {maximum: 140}}
   validates :user_id, {presence: true}
   belongs_to :user, optional: true
+  has_many :comments, dependent: :destroy
   mount_uploader :file, AudiofileUploader
 
   def self.search(keyword)
