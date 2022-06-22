@@ -1404,6 +1404,11 @@ progress {
     width: 66.66666667%;
   }
 
+  .col-lg-8-2 {
+    flex: 0 0 auto;
+    width: 80%;
+  }
+
   .col-lg-9 {
     flex: 0 0 auto;
     width: 75%;
@@ -6527,14 +6532,6 @@ textarea.form-control-lg {
   --bs-aspect-ratio: 42.8571428571%;
 }
 
-.fixed-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
-
 .fixed-bottom {
   position: fixed;
   right: 0;
@@ -11332,7 +11329,7 @@ hr.divider-light {
 }
 
 .user-background {
-  padding-top: 10rem;
+  // padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
   background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("top.jpg");
   background-position: center;
@@ -11405,7 +11402,7 @@ hr.divider-light {
 }
 
 header.masthead {
-  padding-top: 10rem;
+  // padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
   background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("top.jpg");
   background-position: center;
