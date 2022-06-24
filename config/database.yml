@@ -13,7 +13,7 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
+  # username: root
   password: Portfolio-777
   host: localhost
   socket: /tmp/mysql.sock
@@ -57,3 +57,4 @@ production:
   password: <%= ENV["VOICELIFE_DATABASE_PASSWORD"] %>
   host: <%= ENV["VOICELIFE_DATABASE_HOSTNAME"] %>
   port: <%= ENV["VOICELIFE_DATABASE_PORT"] %>
+
