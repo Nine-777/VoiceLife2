@@ -1,0 +1,21 @@
+branch-defaults:
+  easylogin2:
+    environment: Voicelifetest2-env
+  master:
+    environment: Voicelifetest2-env
+environment-defaults:
+  Voicelifetest2-env:
+    branch: null
+    repository: null
+global:
+  application_name: Voicelifetest2
+  default_ec2_keyname: VoiceLifeTest
+  default_platform: Ruby 3.0 running on 64bit Amazon Linux 2
+  default_region: ap-northeast-1
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
+  sc: git
+  workspace_type: Application
